@@ -2,6 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ProjectCard from "../items/ProjectCard";
 
+import PropTypes from "prop-types";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+
 const projects1 = [
   {
     name: "ZaLat Pizza Prototype",
@@ -61,12 +68,64 @@ const projects2 = [
   },
 ];
 
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `full-width-tab-${index}`,
+    "aria-controls": `full-width-tabpanel-${index}`,
+  };
+}
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: theme.palette.background.paper,
+    width: 500,
+  },
+}));
+
+
 
 function Projects() {
+
+
+  const classes = useStyles();
+  const theme = useTheme();
   const location = useLocation();
 
   const [rProjects, setrProjects] = useState([]);
   const [jProjects, setjProjects] = useState([]);
+
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
 
   useEffect(() => {
     setrProjects(projects1);
@@ -77,27 +136,40 @@ function Projects() {
     <div>
       <div className="container mt-4"></div>
 
-      <div className="row justify-content-center">
-        <h3 className="text-center mt-4 mb-3">React Projects</h3>
-      </div>
-      <div className="row justify-content-around" label="React">
-        {rProjects
-          ? rProjects.map((project) => (
-              <ProjectCard
-                key={project.name}
-                image={project.image}
-                name={project.name}
-                description={project.description}
-                github={project.github}
-                site={project.site}
-              />
-            ))
-          : null}
-      </div>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        indicatorColor="primary"
+        textColor="primary"
+        centered
+      >
+        <Tab label="React Projects" {...a11yProps(0)} />
+        <Tab label="JavaScript Projects" {...a11yProps(1)} />
+      </Tabs>
 
-      <div className="row justify-content-center">
-        <h3 className="text-center mt-4 mb-3">JavaScript Projects</h3>
-      </div>
+      <TabPanel value={value} index={0} dir={theme.direction}>
+        <div className="row justify-content-center">
+          <h3 className="text-center mt-4 mb-3">React Projects</h3>
+        </div>
+        <div className="row justify-content-around" label="React">
+          {rProjects
+            ? rProjects.map((project) => (
+                <ProjectCard
+                  key={project.name}
+                  image={project.image}
+                  name={project.name}
+                  description={project.description}
+                  github={project.github}
+                  site={project.site}
+                />
+              ))
+            : null}
+        </div>
+      </TabPanel>
+      <TabPanel value={value} index={1} dir={theme.direction}>
+        <div className="row justify-content-center">
+          <h3 className="text-center mt-4 mb-3">JavaScript Projects</h3>
+        </div>
         <div className="row justify-content-around">
           {jProjects
             ? jProjects.map((project) => (
@@ -112,6 +184,7 @@ function Projects() {
               ))
             : null}
         </div>
+      </TabPanel>
     </div>
   );
 }
