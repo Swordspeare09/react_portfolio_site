@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 
 const projects1 = [
   {
@@ -108,6 +108,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const StyledTabs = withStyles({
+  root: {
+    background: "#4db6ac",
+    border: 0,
+    color: "white",
+    height: 48,
+  },
+  label: {
+    textTransform: "capitalize",
+  },
+})(Tabs);
+
 
 
 function Projects() {
@@ -136,21 +148,17 @@ function Projects() {
     <div>
       <div className="container mt-4"></div>
 
-      <Tabs
+      <StyledTabs
         value={value}
         onChange={handleChange}
-        indicatorColor="primary"
-        textColor="primary"
+        indicatorColor="none"
         centered
       >
         <Tab label="React Projects" {...a11yProps(0)} />
         <Tab label="JavaScript Projects" {...a11yProps(1)} />
-      </Tabs>
+      </StyledTabs>
 
       <TabPanel value={value} index={0} dir={theme.direction}>
-        <div className="row justify-content-center">
-          <h3 className="text-center mt-4 mb-3">React Projects</h3>
-        </div>
         <div className="row justify-content-around" label="React">
           {rProjects
             ? rProjects.map((project) => (
@@ -167,9 +175,6 @@ function Projects() {
         </div>
       </TabPanel>
       <TabPanel value={value} index={1} dir={theme.direction}>
-        <div className="row justify-content-center">
-          <h3 className="text-center mt-4 mb-3">JavaScript Projects</h3>
-        </div>
         <div className="row justify-content-around">
           {jProjects
             ? jProjects.map((project) => (

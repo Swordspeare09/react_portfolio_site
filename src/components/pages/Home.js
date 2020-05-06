@@ -5,7 +5,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import { teal } from "@material-ui/core/colors";
 import Background from "../../images/CityPic.jpg";
 
-import "../../CSS/Home.css";
+import "../../CSS/Styles.css";
 
 
 function Home() {

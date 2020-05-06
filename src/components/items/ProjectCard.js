@@ -11,7 +11,7 @@ function ProjectCard(props) {
           <p className="card-text">{props.description}</p>
           <a
             type="button"
-            className="btn btn-outline-info"
+            className="btn btn-outline-info code-button"
             href={props.github}
             target="_blank"
             rel="noreferrer noopener"
