@@ -8,7 +8,7 @@
 .text{
     text-align: center;
     background-color: #4db6ac;
-    opacity: 85%;
+    opacity: .85;
     padding-top: 1.0em;
     padding-bottom: .75em;
     margin-top: 3px;
@@ -18,7 +18,7 @@
 .text2{
     text-align: center;
     background-color: #4db6ac;
-    opacity: 85%;
+    opacity: .85;
     margin-top: 3px;
     margin-right: 25px;
     margin-left: 25px;

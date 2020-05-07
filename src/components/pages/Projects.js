@@ -15,27 +15,27 @@ const projects1 = [
     description:
       "This collaborative work was engineered to show the use of SQL and React.js knowledge.",
     github: "https://github.com/Swordspeare09/project3",
-    site: "https://pizza-app-p3.herokuapp.com/"
+    site: "https://pizza-app-p3.herokuapp.com/",
   },
   {
     name: "React-ive Reading List",
     description:
       "A MERN application that allows users to create a a reading list for to share with others.",
     github: "https://github.com/Swordspeare09/React-iveReadingList",
-    site: "https://afternoon-depths-78435.herokuapp.com/"
+    site: "https://afternoon-depths-78435.herokuapp.com/",
   },
   {
     name: "Employee Directory",
     description:
       "Built with React.js, this application simulates the organization of an employee catalog.",
     github: "https://github.com/Swordspeare09/user-directory",
-    site: "https://swordspeare09.github.io/user-directory/"
+    site: "https://swordspeare09.github.io/user-directory/",
   },
   {
     name: "Portfolio v2",
     description: "My personal online resume ",
-    github: "https://github.com/Swordspeare09/project3",
-    site: "https://www.google.com/"
+    github: "https://github.com/Swordspeare09/react_portfolio_site",
+    site: "https://swordspeare09.github.io/react_portfolio_site",
   },
 ];
 
