@@ -15,6 +15,7 @@ function Contact() {
         backgroundImage: `url(${Background})`,
         backgroundSize: `cover`,
         backgroundRepeat: "no-repeat",
+        zIndex: "-1"
       }}
     >
       <h1 className="text2">Connect With Me</h1>

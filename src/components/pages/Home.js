@@ -18,6 +18,7 @@ function Home() {
         backgroundImage: `url(${Background})`,
         backgroundSize: `cover`,
         backgroundRepeat: "no-repeat",
+        zIndex: "-1",
       }}
     >
       <div className="text">
