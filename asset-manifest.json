@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/React-Portfolio/static/css/main.dd7ec596.chunk.css",
+    "main.js": "/React-Portfolio/static/js/main.9aa5beb7.chunk.js",
+    "main.js.map": "/React-Portfolio/static/js/main.9aa5beb7.chunk.js.map",
+    "runtime-main.js": "/React-Portfolio/static/js/runtime-main.8f4bb17c.js",
+    "runtime-main.js.map": "/React-Portfolio/static/js/runtime-main.8f4bb17c.js.map",
+    "static/js/2.a849826b.chunk.js": "/React-Portfolio/static/js/2.a849826b.chunk.js",
+    "static/js/2.a849826b.chunk.js.map": "/React-Portfolio/static/js/2.a849826b.chunk.js.map",
+    "index.html": "/React-Portfolio/index.html",
+    "precache-manifest.e7540522ef69f807f67debff700d4b2f.js": "/React-Portfolio/precache-manifest.e7540522ef69f807f67debff700d4b2f.js",
+    "service-worker.js": "/React-Portfolio/service-worker.js",
+    "static/css/main.dd7ec596.chunk.css.map": "/React-Portfolio/static/css/main.dd7ec596.chunk.css.map",
+    "static/js/2.a849826b.chunk.js.LICENSE.txt": "/React-Portfolio/static/js/2.a849826b.chunk.js.LICENSE.txt",
+    "static/media/CityPic.jpg": "/React-Portfolio/static/media/CityPic.5ffca266.jpg",
+    "static/media/HeadSnipePic.jpg": "/React-Portfolio/static/media/HeadSnipePic.6084f9d2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f4bb17c.js",
+    "static/js/2.a849826b.chunk.js",
+    "static/css/main.dd7ec596.chunk.css",
+    "static/js/main.9aa5beb7.chunk.js"
+  ]
+}
