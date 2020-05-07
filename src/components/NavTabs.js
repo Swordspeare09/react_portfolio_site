@@ -9,8 +9,12 @@ function NavTabs() {
     <ul className="nav nav-tabs justify-content-center ">
       <li className="nav-item">
         <Link
-          to="/"
-          className={location.pathname === "/" ? "nav-link active" : "nav-link"}
+          to="/react_portfolio_site"
+          className={
+            location.pathname === "/react_portfolio_site"
+              ? "nav-link active"
+              : "nav-link"
+          }
         >
           Home
         </Link>

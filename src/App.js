@@ -9,8 +9,8 @@ function App() {
   return (
     <div>
       <Router>
-        <NavTabs/>
-        <Route exact path="/" component={Home} />
+        <NavTabs />
+        <Route exact path="/react_portfolio_site" component={Home} />
         <Route path="/Projects" component={Projects} />
         <Route path="/Contact" component={Contact} />
       </Router>
