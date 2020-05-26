@@ -43,7 +43,7 @@ const projects2 = [
   {
     name: "Poke Quiz",
     description:
-      "Fun mobile first porject that uses API calls to create a fun drinking game.",
+      "Fun mobile first project that uses API calls to create a fun drinking game.",
     github: "https://github.com/Swordspeare09/PokeQuiz",
     site: "https://swordspeare09.github.io/PokeQuiz/",
   },
